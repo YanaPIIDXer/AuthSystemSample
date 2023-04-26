@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import axios from "@/modules/Axios";
+import axios from "./modules/Axios";
 
 const userId = ref("");
 const password = ref("");
