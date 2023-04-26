@@ -17,6 +17,7 @@ const submitLogin = async () => {
       password: password.value,
     }
     const response = await axios.post("/login", body);
+    alert("OK");
     console.log(response);
   } catch (error: any) {
     alert(error.message ? error.message : "何かエラー");
@@ -37,6 +38,7 @@ const submitRegister = async () => {
       password: password.value,
     }
     const response = await axios.post("/register", body);
+    alert("OK");
     console.log(response);
   } catch (error: any) {
     alert(error.message ? error.message : "何かエラー");
@@ -51,6 +53,7 @@ defineExpose({
   password,
   isProcessing,
   submitLogin,
+  submitRegister,
 });
 </script>
 
