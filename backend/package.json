@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "nodemon ./src/server.ts"
+    "dev": "nodemon ./src/server.ts",
+    "db": "ts-node ./src/db.ts"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
