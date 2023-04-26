@@ -6,12 +6,12 @@ import User from "../models/User";
 passport.use(
   new LocalStrategy(
     {
-      usernameField: "loginId",
+      usernameField: "userId",
       passwordField: "password",
     },
-    async (loginId, password, done) => {
+    async (userId, password, done) => {
       try {
-        const user = await User.findOne({ where: { loginId } });
+        const user = await User.findOne({ where: { loginId: userId } });
 
         if (!user) {
           return done(null, false, { message: "Incorrect email." });
