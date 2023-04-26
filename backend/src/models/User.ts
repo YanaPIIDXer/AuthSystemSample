@@ -33,6 +33,6 @@ User.init({
 }, {
   tableName: "Users",
   sequelize,
-})
+});
 
 export default User;
