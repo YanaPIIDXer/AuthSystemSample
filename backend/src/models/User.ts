@@ -8,6 +8,7 @@ class User extends Model {
   public id!: number;
   public loginId!: string;
   public password!: string;
+  public loginStrategy!: number
 }
 
 User.init({
@@ -25,6 +26,10 @@ User.init({
     type: DataTypes.STRING,
     allowNull: false,
   },
+  loginStrategy: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  }
 }, {
   tableName: "Users",
   sequelize,
