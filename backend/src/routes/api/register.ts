@@ -10,6 +10,7 @@ export default async (req: Request, res: Response): Promise<void> => {
     const user = await User.create({ loginId: userId, password: hashedPassword, loginStrategy: 0 });
     res.status(201).json({ user });
   } catch (error) {
+    console.error(error);
     res.status(500).json({ error });
   }
 };
